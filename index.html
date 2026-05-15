@@ -1,0 +1,753 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0FB5AE" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#061214" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" type="image/png" href="./assets/logo.png" />
+
+  <title>Luka Talent Architect · Optimiza tu CV, tu LinkedIn y tu estrategia profesional</title>
+  <meta
+    name="description"
+    content="Servicios profesionales para mejorar tu hoja de vida, tu perfil de LinkedIn y tu estrategia de búsqueda de empleo. CV optimizado para ATS, entrenamiento de entrevista y networking con reclutadores."
+  />
+  <meta name="keywords" content="optimización de hoja de vida, CV profesional, LinkedIn SEO, ATS, búsqueda de empleo, reclutadores, Luka Talent Architect" />
+  <meta name="author" content="Luka Talent Architect" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Luka Talent Architect · Tu próximo empleo empieza por tu perfil" />
+  <meta property="og:description" content="Optimiza tu CV, tu LinkedIn y tu presentación profesional con una estrategia clara para destacar frente a reclutadores y filtros ATS." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_CO" />
+  <meta property="og:image" content="./assets/images/og-luka-talent-architect.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Luka Talent Architect" />
+  <meta name="twitter:description" content="Optimiza tu CV, tu LinkedIn y tu estrategia profesional. Resultados claros para destacar frente a reclutadores." />
+
+  <!--
+    Aplicación de tema antes del primer paint para evitar flash claro→oscuro.
+    Se mantiene mínimo y sin depender de script.js.
+  -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('luka-theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = saved === 'light' || saved === 'dark' ? saved : (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) { /* noop */ }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+
+  <!-- ============================ HEADER ============================ -->
+  <header class="site-header" id="top">
+    <div class="container header-row">
+      <a href="#top" class="brand" aria-label="Luka Talent Architect — inicio">
+        <img class="brand-logo" src="./assets/logo.png" alt="Luka Talent Architect" width="36" height="36" />
+        <span class="brand-name">Luka Talent <span class="brand-name-accent">Architect</span></span>
+      </a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="#proceso">Método</a>
+        <a href="#planes">Planes</a>
+        <a href="#entregables">Entregables</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Toggle de tema -->
+        <button
+          id="themeToggle"
+          type="button"
+          class="theme-toggle"
+          aria-label="Cambiar tema claro u oscuro"
+          aria-pressed="false"
+          title="Cambiar tema"
+        >
+          <!-- Sol -->
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.2" fill="currentColor"/>
+            <g stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+              <path d="M12 2.5v2.4"/><path d="M12 19.1v2.4"/>
+              <path d="M2.5 12h2.4"/><path d="M19.1 12h2.4"/>
+              <path d="M4.9 4.9l1.7 1.7"/><path d="M17.4 17.4l1.7 1.7"/>
+              <path d="M4.9 19.1l1.7-1.7"/><path d="M17.4 6.6l1.7-1.7"/>
+            </g>
+          </svg>
+          <!-- Luna -->
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+
+        <a
+          class="btn btn-primary header-cta"
+          href="#planes"
+        >
+          <span class="header-cta-text-long">Conocer planes</span>
+          <span class="header-cta-text-short">Ver planes</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================ HERO ============================ -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <span class="hero-glow"></span>
+      <span class="hero-dots"></span>
+    </div>
+
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          Arquitectura profesional para tu carrera
+        </span>
+
+        <h1 class="h-display">
+          Tu hoja de vida no solo debe verse bien.
+          <span class="text-gradient">Debe lograr que te contraten.</span>
+        </h1>
+
+        <p class="lede">
+          Optimiza tu CV, tu LinkedIn y tu presentación profesional con una
+          estrategia clara para destacar frente a reclutadores, filtros ATS y
+          nuevas oportunidades laborales.
+        </p>
+
+        <ul class="hero-checklist" role="list">
+          <li><span class="check" aria-hidden="true"></span>CV optimizado para ATS</li>
+          <li><span class="check" aria-hidden="true"></span>Perfil que comunica tu valor</li>
+          <li><span class="check" aria-hidden="true"></span>LinkedIn que atrae reclutadores</li>
+          <li><span class="check" aria-hidden="true"></span>Entrega lista en 48–72 horas</li>
+        </ul>
+
+        <div class="hero-actions">
+          <a
+            class="btn btn-primary"
+            href="#planes"
+          >
+            Quiero mejorar mi perfil profesional
+          </a>
+          <a class="btn btn-outline" href="#planes">Ver planes</a>
+        </div>
+
+        <p class="hero-footnote">
+          +100 perfiles profesionales optimizados · Atención personalizada
+        </p>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-image-frame">
+          <img
+            class="hero-image"
+            src="./assets/images/hero-luka-talent-architect.png"
+            alt="Profesional revisando su CV optimizado en computador"
+            loading="eager" decoding="async"
+          />
+        </div>
+
+        <div class="hero-badge" aria-hidden="true">
+          <div class="hero-badge-icon">ATS</div>
+          <div>
+            <p class="hero-badge-title">CV compatible</p>
+            <p class="hero-badge-text">con filtros automatizados</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== PAIN POINTS ====================== -->
+  <section class="section section-pain">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">El problema real</span>
+        <h2 class="h-section">
+          Aplicas, te esfuerzas y aun así
+          <span class="text-primary">no te llaman.</span>
+        </h2>
+        <p class="lede">
+          La mayoría de los profesionales no tienen un problema de talento.
+          Tienen un problema de comunicación profesional. Hoy compites con
+          filtros ATS, reclutadores con segundos de atención y cientos de
+          perfiles parecidos al tuyo.
+        </p>
+      </div>
+
+      <ul class="pain-grid" role="list">
+        <li class="card pain-card">
+          <span class="pain-x" aria-hidden="true">✕</span>
+          <p>Envías hojas de vida y nadie responde.</p>
+        </li>
+        <li class="card pain-card">
+          <span class="pain-x" aria-hidden="true">✕</span>
+          <p>Tu experiencia suena genérica y no destaca tu valor.</p>
+        </li>
+        <li class="card pain-card">
+          <span class="pain-x" aria-hidden="true">✕</span>
+          <p>No sabes adaptar tu perfil a cada vacante.</p>
+        </li>
+        <li class="card pain-card">
+          <span class="pain-x" aria-hidden="true">✕</span>
+          <p>Sientes que pierdes el esfuerzo por falta de dirección.</p>
+        </li>
+        <li class="card pain-card">
+          <span class="pain-x" aria-hidden="true">✕</span>
+          <p>No sabes cómo mostrar tus logros sin sonar exagerado.</p>
+        </li>
+        <li class="card pain-card">
+          <span class="pain-x" aria-hidden="true">✕</span>
+          <p>Sientes que mereces mejores cargos pero no logras dar el salto.</p>
+        </li>
+        <li class="card pain-card">
+          <span class="pain-x" aria-hidden="true">✕</span>
+          <p>No sabes como estructurar un plan para conseguir mejores oportunidades laborales.</p>
+        </li>
+        <li class="card pain-card">
+          <span class="pain-x" aria-hidden="true">✕</span>
+          <p>No logras resaltar tus principales fortalezas profesionales</p>
+        </li>
+      </ul>
+
+      <p class="section-footnote">
+        Si alguna de estas frases te resulta familiar, no estás solo. Y tiene
+        solución.
+      </p>
+    </div>
+  </section>
+
+  <!-- ====================== PROCESO ====================== -->
+  <section id="proceso" class="section section-process">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Nuestro método</span>
+        <h2 class="h-section">
+          Un proceso claro, en <span class="text-primary">tres pasos.</span>
+        </h2>
+        <p class="lede">
+          Sin promesas vacías. Diagnosticamos, optimizamos y te entregamos todo
+          listo para postular con confianza y seguridad.
+        </p>
+      </div>
+
+      <ol class="process-grid" role="list">
+        <li class="card process-card">
+          <div class="process-head">
+            <span class="process-num">01</span>
+            <span class="process-step">Paso 1</span>
+          </div>
+          <h3>Diagnóstico</h3>
+          <p>Analizamos tu perfil, tus objetivos profesionales y los puntos a mejorar para crear un plan personalizado.</p>
+        </li>
+        <li class="card process-card">
+          <div class="process-head">
+            <span class="process-num">02</span>
+            <span class="process-step">Paso 2</span>
+          </div>
+          <h3>Optimización</h3>
+          <p>Diseñamos tu CV, perfil y estructuramos con foco en logros, palabras clave y la lógica que reclutadores y ATS realmente buscan.</p>
+        </li>
+        <li class="card process-card">
+          <div class="process-head">
+            <span class="process-num">03</span>
+            <span class="process-step">Paso 3</span>
+          </div>
+          <h3>Entrega y acción</h3>
+          <p>Recibes tus entregables editables, guía de uso y tu plan de acción para LinkedIn, entrevistas y networking.</p>
+        </li>
+      </ol>
+
+      <div class="process-image-frame">
+        <img
+          class="process-image"
+          src="./assets/images/process-visual.png"
+          alt="Diagrama del proceso de optimización profesional en tres pasos"
+          loading="lazy" decoding="async"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== PLANES ====================== -->
+  <section id="planes" class="section section-plans">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Planes</span>
+        <h2 class="h-section">
+          Tres rutas. Una sola meta:
+          <span class="text-primary">que te contraten.</span>
+        </h2>
+        <p class="lede">
+          Elige el plan según tu momento profesional. Cada uno está pensado
+          estratégicamente para tener mejores resultados en la búsqueda de empleo.
+        </p>
+      </div>
+
+      <div class="plans-grid plans-grid--three">
+        <!-- Plan Impulso -->
+        <article class="plan-card">
+          <header>
+            <h3>Plan Impulso Inicial</h3>
+            <p class="plan-audience">
+              Estudiantes, perfiles junior, personas operativas y quienes
+              necesitan mejorar rápido su hoja de vida y su perfil.
+            </p>
+          </header>
+
+          <div class="plan-price">
+            <span class="plan-amount">$180.000 COP</span>
+            <span class="plan-note">Pago único · entrega en 48–72h</span>
+          </div>
+
+          <p class="plan-pitch">
+            Construimos la base sólida para que tu hoja de vida deje de ser un
+            trámite y se convierta en una herramienta de conversación con
+            reclutadores.
+          </p>
+
+          <ul class="plan-features" role="list">
+            <li><span class="check check-neutral" aria-hidden="true"></span>CV profesional optimizado, claro y orientado a resultados</li>
+            <li><span class="check check-neutral" aria-hidden="true"></span>Perfil profesional redactado con tu propuesta de valor</li>
+            <li><span class="check check-neutral" aria-hidden="true"></span>Guía práctica de búsqueda de empleo digital</li>
+            <li><span class="check check-neutral" aria-hidden="true"></span>Carta de presentación lista para usar</li>
+            <li><span class="check check-neutral" aria-hidden="true"></span>Tracker ProPulso para organizar tus postulaciones</li>
+            <li><span class="check check-neutral check-gift" aria-hidden="true"></span>Prompt de optimización de la hoja de vida</li>
+          </ul>
+
+          <div class="plan-cta">
+            <a
+              class="btn btn-neutral wa-link wa-plan-impulso"
+              data-wa-msg="planImpulso"
+              data-wa-source="plans_impulso"
+              href="#"
+            >
+              Quiero el Plan Impulso
+            </a>
+            <p class="plan-footnote">Pago único · entrega en 48–72 horas</p>
+          </div>
+        </article>
+
+        <!-- Plan Elite (recomendado) -->
+        <article class="plan-card plan-card--highlight">
+          <span class="plan-badge">★ Más comprado</span>
+          <header>
+            <h3>Plan Élite Profesional</h3>
+            <p class="plan-audience">
+              Técnicos, tecnólogos y profesionales con experiencia que buscan
+              mejores cargos, mejores salarios o nuevos mercados.
+            </p>
+          </header>
+
+          <div class="plan-price">
+            <span class="plan-amount">$280.000 COP</span>
+            <span class="plan-note">Pago único · entrega en 48–72h</span>
+          </div>
+
+          <p class="plan-pitch">
+            La estrategia integral para que tu perfil compita por las vacantes
+            que realmente te corresponden. Posicionamiento, ATS, entrevista y
+            networking.
+          </p>
+
+          <ul class="plan-features" role="list">
+            <li><span class="check check-strong" aria-hidden="true"></span>Todo lo del Plan Impulso Inicial</li>
+            <li><span class="check check-strong" aria-hidden="true"></span>Optimización SEO de LinkedIn (titular, sobre, palabras clave)</li>
+            <li><span class="check check-strong" aria-hidden="true"></span>Enfoque en logros, métricas y resultados</li>
+            <li><span class="check check-strong" aria-hidden="true"></span>CV optimizado para filtros ATS</li>
+            <li><span class="check check-strong" aria-hidden="true"></span>Preguntas estratégicas para abordar mejor tus entrevistas laborales</li>
+            <li><span class="check check-strong" aria-hidden="true"></span>Estrategia de networking con reclutadores y empresas</li>
+            <li><span class="check check-strong check-gift" aria-hidden="true"></span>Prompt de optimización de la hoja de vida</li>
+            <li><span class="check check-strong check-gift" aria-hidden="true"></span>Prompt de crecimiento sostenido en LinkedIn</li>
+          </ul>
+
+          <div class="plan-cta">
+            <a
+              class="btn btn-primary wa-link wa-plan-elite"
+              data-wa-msg="planElite"
+              data-wa-source="plans_elite"
+              href="#"
+            >
+              Quiero el Plan Elite
+            </a>
+            <p class="plan-footnote">Pago único · entrega en 48–72 horas</p>
+          </div>
+        </article>
+
+        <!-- Plan Arquitectura Total (más completo) -->
+        <article class="plan-card plan-card--premium">
+          <span class="plan-badge plan-badge--gold">◆ Más completo</span>
+          <header>
+            <h3>Plan Arquitectura Total</h3>
+            <p class="plan-audience">
+              Profesionales que quieren optimizar su perfil 
+              y trabajar los bloqueos internos que frenan su búsqueda.
+            </p>
+          </header>
+
+          <div class="plan-price">
+            <span class="plan-amount">$370.000 COP</span>
+            <span class="plan-note">Pago único · entrega en 48–72h + sesión</span>
+          </div>
+
+          <p class="plan-pitch">
+            El único plan que trabaja tanto tu presentación profesional como el observador que la usa. 
+            Porque el CV más potente no funciona si la mirada está limitada.
+          </p>
+
+          <ul class="plan-features" role="list">
+            <li><span class="check check-gold" aria-hidden="true"></span>Todo lo del Plan Elite Profesional</li>
+            <li><span class="check check-gold" aria-hidden="true"></span>Sesión 1 a 1 de coaching ontológico (45 a 60 min)</li>
+            <li><span class="check check-gold" aria-hidden="true"></span>Identificación y trabajo sobre creencias limitantes</li>
+            <li><span class="check check-gold" aria-hidden="true"></span>Nueva mirada sobre tu valor y el mercado laboral</li>
+            <li><span class="check check-gold" aria-hidden="true"></span>Ruta de acción concreta para los próximos 30 días</li>
+            <li><span class="check check-gold check-gift" aria-hidden="true"></span>Prompt de optimización de la hoja de vida</li>
+            <li><span class="check check-gold check-gift" aria-hidden="true"></span>Prompt de crecimiento sostenido en LinkedIn</li>
+            <li><span class="check check-gold check-gift" aria-hidden="true"></span>Regalo sorpresa exclusivo</li>
+          </ul>
+          
+          <div class="plan-cta">
+            <a
+              class="btn btn-gold wa-link wa-plan-arquitectura"
+              data-wa-msg="planArquitectura"
+              data-wa-source="plans_arquitectura"
+              href="#"
+            >
+              Quiero el Plan Arquitectura
+            </a>
+            <p class="plan-footnote">Pago único · entrega en 48–72 horas · más agendamiento de la sesión</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="plans-cta-banner" id="plans-cta-banner">
+        <span class="plans-cta-icon" aria-hidden="true">🚀</span>
+        <p class="plans-cta-text">
+          No esperes más. <span class="text-accent">Elige tu plan y da el primer paso</span> hacia la oportunidad que mereces.
+        </p>
+        <a
+          class="btn btn-secondary"
+          href="#planes"
+        >
+          Empezar ahora
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== ENTREGABLES ====================== -->
+  <section id="entregables" class="section section-deliverables">
+    <div class="container">
+      <div class="deliverables-grid">
+        <div class="deliverables-image order-2">
+          <p class="deliverables-disclaimer">* Imágenes ilustrativas</p>
+          <div class="deliverables-image-frame">
+            <img
+              class="deliverables-image"
+              src="./assets/images/entregables-bundle.png"
+              alt="Kit de materiales entregados: CV, carta, LinkedIn y tracker"
+              loading="lazy" decoding="async"
+            />
+          </div>
+        </div>
+
+        <div class="deliverables-content order-1">
+          <span class="eyebrow">Lo que vas a recibir</span>
+          <h2 class="h-section">
+            No compras un documento.
+            <span class="text-primary">Compras posicionamiento profesional.</span>
+          </h2>
+          <p class="lede">
+            Cada plan entrega materiales editables y listos para usar,
+            acompañados de guías prácticas para que alcances tus metas y sigas creciendo.
+          </p>
+
+          <ul class="deliverables-list" role="list">
+            <li>
+              <span class="check" aria-hidden="true"></span>
+              <div>
+                <p class="deliverable-title">CV profesional optimizado</p>
+                <p class="deliverable-text">Diseño limpio, redacción estratégica y formato compatible con filtros ATS.</p>
+              </div>
+            </li>
+            <li>
+              <span class="check" aria-hidden="true"></span>
+              <div>
+                <p class="deliverable-title">Perfil profesional redactado</p>
+                <p class="deliverable-text">Tu propuesta de valor en pocas líneas, lista para LinkedIn, CV y entrevistas.</p>
+              </div>
+            </li>
+            <li>
+              <span class="check" aria-hidden="true"></span>
+              <div>
+                <p class="deliverable-title">Carta de presentación</p>
+                <p class="deliverable-text">Plantilla personalizada que conecta tu historia con la vacante.</p>
+              </div>
+            </li>
+            <li>
+              <span class="check" aria-hidden="true"></span>
+              <div>
+                <p class="deliverable-title">Guía de búsqueda de empleo digital</p>
+                <p class="deliverable-text">Pasos claros para encontrar, filtrar y aplicar a vacantes de forma inteligente.</p>
+              </div>
+            </li>
+            <li>
+              <span class="check" aria-hidden="true"></span>
+              <div>
+                <p class="deliverable-title">Tracker ProPulso</p>
+                <p class="deliverable-text">Hoja para organizar postulaciones, estados, contactos y próximos pasos.</p>
+              </div>
+            </li>
+            <li>
+              <span class="check" aria-hidden="true"></span>
+              <div>
+                <p class="deliverable-title">Prompts con IA</p>
+                <p class="deliverable-text">Adapta tu CV a cada vacante y potencia tu visibilidad en LinkedIn con IA.</p>
+              </div>
+            </li>
+            <li>
+              <span class="check" aria-hidden="true"></span>
+              <div>
+                <p class="deliverable-title">LinkedIn estratégico (Elite)</p>
+                <p class="deliverable-text">Titular, sobre, palabras clave y enfoque en logros para destacar.</p>
+              </div>
+            </li>
+            <li>
+              <span class="check" aria-hidden="true"></span>
+              <div>
+                <p class="deliverable-title">Preguntas estrategicas (Elite)</p>
+                <p class="deliverable-text">Para abordar con mayor seguridad tus entrevistas laborales.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== HOW IT WORKS ====================== -->
+  <section class="section section-how">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Cómo funciona</span>
+        <h2 class="h-section">
+          Cómo funciona el proceso
+        </h2>
+        <p class="lede">
+          Todo inicia por WhatsApp: eliges tu plan, recibes la información de pago y, después de confirmar el comprobante, empezamos a construir tu material profesional.
+        </p>
+      </div>
+
+      <ol class="how-timeline" role="list">
+        <li class="how-step">
+          <span class="how-num">1</span>
+          <div>
+            <p class="how-title">Eliges tu plan</p>
+            <p class="how-text">Revisas las opciones disponibles y eliges el plan que más se ajuste.</p>
+          </div>
+        </li>
+        <li class="how-step">
+          <span class="how-num">2</span>
+          <div>
+            <p class="how-title">Escribes por WhatsApp</p>
+            <p class="how-text">Haces clic en el botón del plan elegido.</p>
+          </div>
+        </li>
+        <li class="how-step">
+          <span class="how-num">3</span>
+          <div>
+            <p class="how-title">Recibes la información de pago</p>
+            <p class="how-text">Te compartimos los datos de pago y las indicaciones para confirmar tu compra.</p>
+          </div>
+        </li>
+        <li class="how-step">
+          <span class="how-num">4</span>
+          <div>
+            <p class="how-title">Envías el comprobante</p>
+            <p class="how-text">Una vez realizado el pago, envías el comprobante por WhatsApp para activar el proceso.</p>
+          </div>
+        </li>
+        <li class="how-step">
+          <span class="how-num">5</span>
+          <div>
+            <p class="how-title">Compartes tu información profesional</p>
+            <p class="how-text">Recibirás instrucciones para enviar la información necesaria.</p>
+          </div>
+        </li>
+        <li class="how-step">
+          <span class="how-num">6</span>
+          <div>
+            <p class="how-title">Recibes tus herramientas profesionales</p>
+            <p class="how-text">En aprox 2 horas recibirás tus materiales listos para usar en tu búsqueda de empleo.</p>
+          </div>
+        </li>
+        <li class="how-step">
+          <span class="how-num">7</span>
+          <div>
+            <p class="how-title">Recibes tu Hoja de vida y carta de presentación</p>
+            <p class="how-text">Al rededor de 48 a 72 horas, recibirás tu hoja de vida y carta de presentación personalizados.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="how-cta">
+        <p>Revisa las opciones disponibles y elige el plan que mejor se ajuste a tu momento profesional.</p>
+        <a
+          class="btn btn-primary"
+          href="#planes"
+        >
+          Elegir mi plan
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== FAQ ====================== -->
+  <section id="faq" class="section section-faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Preguntas frecuentes</span>
+        <h2 class="h-section">
+          Información importante antes de
+          <span class="text-primary">elegir tu plan.</span>
+        </h2>
+        <p class="lede">
+          Estas respuestas te ayudan a entender el proceso antes de escribir por WhatsApp y continuar con la compra.
+        </p>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>
+            <span>¿Esto me garantiza conseguir empleo?</span>
+            <svg class="chevron" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          </summary>
+          <p>Nuestros planes no garantizan empleo. Garantizan que tu perfil llegue más lejos, sea leído y hable de ti con el impacto que mereces - dándote una ventaja real frente a quienes compiten con las mismas calificaciones.</p>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span>¿Qué recibo exactamente?</span>
+            <svg class="chevron" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          </summary>
+          <p>Recibes tu hoja de vida rediseñada, tu perfil de LinkedIn optimizado y una ruta clara de cómo buscar empleo de forma estratégica.</p>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span>¿En cuánto tiempo entregan?</span>
+            <svg class="chevron" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          </summary>
+          <p>Entregamos tus materiales en dos tiempos: las herramientas profesionales en aproximadamente 2 horas y la hoja de vida junto con la carta de presentación entre 48 y 72 horas.</p>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span>¿Cómo se hace el pago?</span>
+            <svg class="chevron" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          </summary>
+          <p>Por transferencia al número de Nequi o a la cuenta Bancolombia que te proporcionaremos vía WhatsApp.</p>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span>¿Qué pasa después de pagar?</span>
+            <svg class="chevron" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          </summary>
+          <p>Se te enviará un enlace con las herramientas profesionales que requieres y un enlace para compartir la información de tu hoja de vida. Luego recibirás tus entregables en el tiempo estipulado.</p>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span>¿Cómo recibo mi material?</span>
+            <svg class="chevron" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          </summary>
+          <p>Por medio de un enlace de descarga a tus herramientas y formatos digitales.</p>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span>¿Cuál plan me conviene?</span>
+            <svg class="chevron" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          </summary>
+          <p>Depende de tu momento.</p>
+          <p>Si estás empezando, el Plan Impulso es tu punto de partida.</p>
+          <p>Si ya tienes experiencia y quieres mejores oportunidades, el Plan Elite es para ti.</p>
+          <p>Si sientes que algo interno también te frena, el Plan Arquitectura Total trabaja todo junto.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== FINAL CTA ====================== -->
+  <section class="section-final-cta">
+    <div class="final-cta-bg" aria-hidden="true">
+      <span class="final-glow final-glow--gold"></span>
+      <span class="final-glow final-glow--aqua"></span>
+    </div>
+    <div class="container">
+      <span class="final-eyebrow">
+        <span class="eyebrow-dot final-eyebrow-dot"></span>
+        Tu próximo paso
+      </span>
+      <h2 class="final-headline">
+        No dejes que la búsqueda de empleo sea una carrera de obstáculos.
+        <span class="final-accent">Hagamos que tu perfil y tu estrategia hablen por sí mismo.</span>
+      </h2>
+      <p class="final-lede">
+        Adquiere tu plan y empezemos a cambiar tu realidad.
+      </p>
+      <div class="final-actions">
+        <a
+          class="btn btn-secondary"
+          href="#planes"
+        >
+          Elegir mi plan
+        </a>
+      </div>
+      <p class="final-footnote">
+        Atención personalizada · Entrega lista en 48–72 horas
+      </p>
+    </div>
+  </section>
+
+  <!-- ====================== FOOTER ====================== -->
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div class="brand brand--footer">
+        <img class="brand-logo" src="./assets/logo.png" alt="Luka Talent Architect" width="24" height="24" />
+        <span class="brand-name">Luka Talent Architect</span>
+      </div>
+
+      <div class="footer-copy">
+        © <span id="year">2026</span> Luka Talent Architect. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp floating -->
+  <a
+    class="wa-floating"
+    href="#planes"
+    aria-label="Ver planes"
+  >
+    <svg viewBox="0 0 24 24" aria-hidden="true" class="wa-floating-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="5" x2="12" y2="19"></line>
+      <polyline points="19 12 12 19 5 12"></polyline>
+    </svg>
+  </a>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>
