@@ -1,8 +1,8 @@
 # Luka Talent Architect
 
-Landing page oficial para presentar y vender los planes de **Luka Talent Architect**, una propuesta enfocada en ayudar a profesionales a mejorar la forma en que comunican su valor laboral.
+Landing page oficial para presentar y vender los paquetes de **Luka Talent Architect**, una propuesta enfocada en ayudar a profesionales a mejorar la forma en que comunican su valor laboral.
 
-Esta página está pensada para funcionar como el centro de una campaña en redes y Meta Ads: la persona ve un anuncio, entra a la página, conoce los planes, elige una opción y continúa el proceso por WhatsApp.
+Esta página está pensada para funcionar como el centro de una campaña en redes y Meta Ads: la persona ve un anuncio, entra a la página, conoce los paquetes, elige una opción y continúa el proceso por WhatsApp.
 
 ---
 
@@ -23,8 +23,8 @@ La comunicación principal de la página parte de esta idea:
 Esta landing sirve para:
 
 - Explicar qué hace Luka Talent Architect.
-- Presentar los planes disponibles.
-- Mostrar qué recibe la persona según el plan elegido.
+- Presentar los paquetes disponibles.
+- Mostrar qué recibe la persona según el paquete elegido.
 - Explicar el proceso de compra y entrega.
 - Resolver preguntas importantes antes de la compra.
 - Llevar a la persona a WhatsApp con una intención clara.
@@ -33,9 +33,9 @@ La página está diseñada especialmente para celular, porque la mayoría de per
 
 ---
 
-## Planes que presenta la página
+## Paquetes que presenta la página
 
-### 1. Plan Impulso Inicial
+### 1. Paquete Impulso Inicial
 
 Pensado para estudiantes, perfiles junior, personas operativas o quienes necesitan mejorar rápido su hoja de vida y su perfil profesional.
 
@@ -46,7 +46,7 @@ Incluye una base para organizar y comunicar mejor la experiencia profesional.
 
 ---
 
-### 2. Plan Élite Profesional
+### 2. Paquete Élite Profesional
 
 Pensado para técnicos, tecnólogos y profesionales con experiencia que quieren mejores cargos, mejores salarios o nuevas oportunidades.
 
@@ -57,11 +57,11 @@ Incluye una optimización más completa del perfil profesional, con enfoque en h
 
 ---
 
-### 3. Plan Arquitectura Total
+### 3. Paquete Arquitectura Total
 
 Es la opción más completa.
 
-Incluye todo lo del Plan Élite Profesional, más una sesión individual de claridad profesional/coaching ontológico para trabajar dirección, creencias, bloqueos, narrativa profesional y próximos pasos.
+Incluye todo lo del Paquete Élite Profesional, más una sesión individual de claridad profesional/coaching ontológico para trabajar dirección, creencias, bloqueos, narrativa profesional y próximos pasos.
 
 Está pensado para personas que no solo necesitan mejorar sus documentos, sino también ganar más claridad sobre cómo se están presentando, qué oportunidades quieren buscar y qué puede estar frenando su avance.
 
@@ -79,9 +79,9 @@ Persona ve anuncio o contenido
 ↓
 Entra a la landing
 ↓
-Revisa los planes
+Revisa los paquetes
 ↓
-Elige el plan que le interesa
+Elige el paquete que le interesa
 ↓
 Escribe por WhatsApp
 ↓
@@ -100,17 +100,17 @@ WhatsApp es el canal principal para continuar la compra, recibir datos de pago y
 
 ## Qué se entrega
 
-La entrega depende del plan elegido.
+La entrega depende del paquete elegido.
 
 Como base, la página comunica la entrega de materiales profesionales como:
 
 - Hoja de vida / CV optimizado.
 - Carta de presentación.
 - Perfil profesional mejorado.
-- Herramientas o guías digitales según el plan.
-- Optimización de LinkedIn en los planes que lo incluyan.
+- Herramientas o guías digitales según el paquete.
+- Optimización de LinkedIn en los paquetes que lo incluyan.
 - Recursos de apoyo para búsqueda laboral.
-- Sesión de claridad profesional en el Plan Arquitectura Total.
+- Sesión de claridad profesional en el Paquete Arquitectura Total.
 
 La página también aclara que los resultados laborales dependen de cada persona, sector y proceso de selección. No se promete empleo garantizado.
 
@@ -122,13 +122,13 @@ La página tiene dos tipos de botones:
 
 ### Botones generales
 
-Los botones como “Ver planes”, “Elegir mi plan” o “Conocer planes” llevan a la sección de planes.
+Los botones como “Ver paquetes”, “Elegir mi paquete” o “Conocer paquetes” llevan a la sección de paquetes.
 
 La idea es que la persona primero entienda las opciones antes de escribir.
 
-### Botones de cada plan
+### Botones de cada paquete
 
-Los botones específicos de cada plan sí abren WhatsApp con un mensaje prellenado.
+Los botones específicos de cada paquete sí abren WhatsApp con un mensaje prellenado.
 
 Esto ayuda a que la conversación llegue más clara desde el inicio, porque la persona ya eligió una opción.
 
@@ -213,7 +213,7 @@ Editar el archivo:
 index.html
 ```
 
-Ahí están los títulos, descripciones, planes, preguntas frecuentes y textos visibles.
+Ahí están los títulos, descripciones, paquetes, preguntas frecuentes y textos visibles.
 
 ### Cambiar colores o diseño
 
@@ -233,7 +233,7 @@ Editar el archivo:
 script.js
 ```
 
-Al inicio del archivo está la configuración del número de WhatsApp y los mensajes prellenados de cada plan.
+Al inicio del archivo está la configuración del número de WhatsApp y los mensajes prellenados de cada paquete.
 
 ---
 
@@ -258,7 +258,7 @@ Anuncio en Meta Ads
 ↓
 Landing Luka Talent Architect
 ↓
-Elección de plan
+Elección de paquete
 ↓
 WhatsApp
 ↓
@@ -267,7 +267,7 @@ Pago y comprobante
 Entrega
 ```
 
-La página no reemplaza la conversación por WhatsApp, pero ayuda a que las personas lleguen más informadas, entiendan la oferta y puedan elegir mejor el plan.
+La página no reemplaza la conversación por WhatsApp, pero ayuda a que las personas lleguen más informadas, entiendan la oferta y puedan elegir mejor el paquete.
 
 ---
 
