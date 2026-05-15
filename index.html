@@ -144,7 +144,13 @@
             class="btn btn-primary"
             href="#paquetes"
           >
-            Quiero mejorar mi perfil profesional
+            Elegir mi paquete
+          </a>
+          <a
+            class="btn btn-outline"
+            href="#proceso"
+          >
+            Cómo funciona
           </a>
         </div>
 
@@ -343,7 +349,7 @@
               data-wa-source="paquetes_impulso"
               href="#"
             >
-              Quiero el Paquete Impulso
+              Quiero el Plan Impulso
             </a>
             <p class="paquete-footnote">Pago único · entrega en 48–72 horas</p>
           </div>
@@ -394,7 +400,7 @@
               data-wa-source="paquetes_elite"
               href="#"
             >
-              Quiero el Paquete Elite
+              Quiero el Plan Élite
             </a>
             <p class="paquete-footnote">Pago único · entrega en 48–72 horas</p>
           </div>
@@ -444,25 +450,14 @@
               data-wa-source="paquetes_arquitectura"
               href="#"
             >
-              Quiero el Paquete Arquitectura
+              Quiero Arquitectura Total
             </a>
             <p class="paquete-footnote">Pago único · entrega en 48–72 horas + sesión</p>
           </div>
         </article>
       </div>
 
-      <div class="paquetes-cta-banner" id="paquetes-cta-banner">
-        <span class="paquetes-cta-icon" aria-hidden="true">🚀</span>
-        <p class="paquetes-cta-text">
-          No esperes más. <span class="text-accent">Elige tu paquete y da el primer paso</span> hacia la oportunidad que mereces.
-        </p>
-        <a
-          class="btn btn-secondary"
-          href="#paquetes"
-        >
-          Empezar ahora
-        </a>
-      </div>
+
     </div>
   </section>
 
@@ -743,6 +738,12 @@
         >
           Elegir mi paquete
         </a>
+        <a
+          class="btn btn-ghost-inverse"
+          href="#proceso"
+        >
+          Cómo funciona
+        </a>
       </div>
       <p class="final-footnote">
         Atención personalizada · Entrega lista en 48–72 horas
@@ -764,33 +765,31 @@
     </div>
   </footer>
 
-  <!-- WhatsApp floating -->
+  <!-- Floating Button -> Planes -->
   <a
     class="wa-floating"
     href="#paquetes"
     aria-label="Ver paquetes"
   >
-    <svg viewBox="0 0 24 24" aria-hidden="true" class="wa-floating-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <line x1="12" y1="5" x2="12" y2="19"></line>
-      <polyline points="19 12 12 19 5 12"></polyline>
+    <svg viewBox="0 0 24 24" aria-hidden="true" class="wa-floating-icon" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="7 13 12 18 17 13"></polyline>
+      <polyline points="7 6 12 11 17 6"></polyline>
     </svg>
   </a>
 
   <!-- ====================== NOTIFICATION TOAST ====================== -->
-  <div id="planNotification" class="plan-notification" role="alert" aria-live="polite" aria-atomic="true">
+  <div id="planNotification" class="plan-notification" role="status" aria-live="polite">
     <div class="plan-notification-inner">
       <div class="plan-notification-icon" aria-hidden="true">
-        <img src="./assets/logo.png" alt="" width="28" height="28" />
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" style="color: var(--primary-strong)">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+        </svg>
       </div>
       <div class="plan-notification-body">
-        <p class="plan-notification-app">Luka Talent Architect</p>
-        <p class="plan-notification-msg">Elige un paquete para continuar 👇</p>
+        <p class="plan-notification-msg">Elige cómo quieres avanzar</p>
+        <p class="plan-notification-app" style="text-transform: none; margin-top: 4px; font-weight: 400; color: var(--muted); font-size: 13px;">Revisa los planes y selecciona la opción que mejor se ajusta a tu momento profesional.</p>
       </div>
-      <button class="plan-notification-close" aria-label="Cerrar notificación" type="button">
-        <svg viewBox="0 0 20 20" width="14" height="14" aria-hidden="true">
-          <path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </button>
     </div>
   </div>
 

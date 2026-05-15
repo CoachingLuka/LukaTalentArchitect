@@ -1801,9 +1801,6 @@ img.deliverables-image {
   font-weight: 500;
   margin-top: 12px;
 }
-[data-theme="dark"] .final-accent {
-  color: var(--primary-deep);
-}
 
 .final-lede {
   margin: 20px auto 0;
@@ -1885,7 +1882,7 @@ img.deliverables-image {
   color: var(--subtle);
 }
 
-/* ---------- WhatsApp floating ---------- */
+/* ---------- Floating Scroll to Plans ---------- */
 .wa-floating {
   position: fixed;
   bottom: 1rem;
@@ -1895,15 +1892,19 @@ img.deliverables-image {
   height: 56px;
   display: grid;
   place-items: center;
-  background: var(--primary);
-  color: var(--on-primary);
+  background: color-mix(in srgb, var(--surface) 80%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--text-strong);
+  border: 1px solid var(--border-strong);
   border-radius: 999px;
   box-shadow:
-    0 8px 24px var(--primary-soft-2),
-    0 18px 40px rgba(0, 0, 0, 0.18);
+    0 8px 24px rgba(0, 0, 0, 0.08),
+    0 18px 40px rgba(0, 0, 0, 0.12);
   transition:
     transform 150ms ease,
     background 200ms ease,
+    border-color 200ms ease,
     box-shadow 200ms ease,
     opacity 200ms ease;
   text-decoration: none;
@@ -1914,11 +1915,13 @@ img.deliverables-image {
   transform: translateY(20px) scale(0.9);
 }
 .wa-floating:hover {
-  background: var(--primary-strong);
+  background: var(--surface);
+  border-color: var(--primary);
+  color: var(--primary);
   transform: scale(1.08);
   box-shadow:
-    0 10px 32px var(--primary-soft-2),
-    0 20px 48px rgba(0, 0, 0, 0.22);
+    0 10px 32px rgba(15, 181, 174, 0.15),
+    0 20px 48px rgba(0, 0, 0, 0.18);
 }
 .wa-floating:focus-visible {
   outline: 2px solid var(--primary);
