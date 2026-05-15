@@ -41,7 +41,7 @@ Pensado para estudiantes, perfiles junior, personas operativas o quienes necesit
 
 Incluye una base para organizar y comunicar mejor la experiencia profesional.
 
-**Valor:** $180.000 COP  
+**Valor:** $179.000 COP  
 **Entrega:** entre 48 y 72 horas para los entregables principales.
 
 ---
@@ -52,7 +52,7 @@ Pensado para técnicos, tecnólogos y profesionales con experiencia que quieren 
 
 Incluye una optimización más completa del perfil profesional, con enfoque en hoja de vida, LinkedIn, ATS, entrevistas, logros y estrategia laboral.
 
-**Valor:** $280.000 COP  
+**Valor:** $279.000 COP  
 **Entrega:** entre 48 y 72 horas para los entregables principales.
 
 ---
