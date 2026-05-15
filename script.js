@@ -192,6 +192,83 @@
   }
 
   /* ----------------------------------------------------------
+     Notificaciones Dinámicas (Apple-like Toast)
+     ---------------------------------------------------------- */
+  /* ----------------------------------------------------------
+     Notificaciones Dinámicas (Toast Premium)
+     ---------------------------------------------------------- */
+  function wireNotifications() {
+    const notif = document.getElementById("planNotification");
+    if (!notif) return;
+
+    const titleEl = document.getElementById("planNotifTitle");
+    const msgEl = document.getElementById("planNotifMsg");
+    const iconEl = document.getElementById("planNotifIcon");
+    let hideTimeout;
+
+    const icons = {
+      paquetes: `
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>
+        </svg>`,
+      proceso: `
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+        </svg>`
+    };
+
+    function showNotification(type) {
+      // Limpiar timeout previo si existe
+      clearTimeout(hideTimeout);
+
+      // Actualizar contenido
+      if (type === 'paquetes') {
+        if (titleEl) titleEl.innerHTML = "<strong>Elige cómo quieres avanzar</strong>";
+        if (msgEl) msgEl.textContent = "Revisa los paquetes y selecciona la opción que mejor se ajusta a tu momento.";
+        if (iconEl) {
+          iconEl.className = "plan-notification-icon icon-aqua";
+          iconEl.innerHTML = icons.paquetes;
+        }
+      } else if (type === 'proceso') {
+        if (titleEl) titleEl.innerHTML = "<strong>Ruta de transformación</strong>";
+        if (msgEl) msgEl.textContent = "Conoce nuestro método paso a paso para elevar tu perfil profesional.";
+        if (iconEl) {
+          iconEl.className = "plan-notification-icon icon-gold";
+          iconEl.innerHTML = icons.proceso;
+        }
+      }
+
+      // Reiniciar animación si ya estaba visible
+      notif.classList.remove("is-visible");
+      void notif.offsetWidth; // Force reflow
+      notif.classList.add("is-visible");
+
+      // Auto-ocultar tras 3.5 segundos
+      hideTimeout = setTimeout(function () {
+        notif.classList.remove("is-visible");
+      }, 3500);
+    }
+
+    // Triggers para paquetes
+    const planLinks = document.querySelectorAll('a[href="#paquetes"]');
+    planLinks.forEach(function (link) {
+      if (link.classList.contains("wa-floating") || link.closest('.paquetes-grid')) return;
+      link.addEventListener("click", function () {
+        showNotification('paquetes');
+      });
+    });
+
+    // Triggers para proceso
+    const processLinks = document.querySelectorAll('a[href="#proceso"]');
+    processLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+        showNotification('proceso');
+      });
+    });
+  }
+
+  /* ----------------------------------------------------------
      FLOATING CTA DYNAMIC BEHAVIOR
      ---------------------------------------------------------- */
   function wireFloatingCta() {
@@ -223,15 +300,85 @@
   }
 
   /* ----------------------------------------------------------
-     FAQ · Comportamiento de acordeón (solo uno abierto)
+     FAQ · Comportamiento de acordeón animado
      ---------------------------------------------------------- */
   function wireFaq() {
     const items = document.querySelectorAll(".faq-item");
-    items.forEach(function (item) {
-      item.addEventListener("toggle", function () {
-        if (item.open) {
-          items.forEach(function (other) {
-            if (other !== item) other.removeAttribute("open");
+
+    items.forEach(function (details) {
+      const summary = details.querySelector("summary");
+      const content = details.querySelector(".faq-content");
+
+      if (!summary || !content) return;
+
+      summary.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        if (details.dataset.animating === "true") return;
+
+        if (details.open) {
+          // Animar cierre
+          details.dataset.animating = "true";
+          const startHeight = details.offsetHeight + "px";
+          
+          // Medir altura cerrada
+          details.removeAttribute("open");
+          const endHeight = details.offsetHeight + "px";
+          // Restaurar para animar
+          details.setAttribute("open", "true");
+          
+          const animation = details.animate({
+            height: [startHeight, endHeight]
+          }, {
+            duration: 250,
+            easing: "cubic-bezier(0.16, 1, 0.3, 1)"
+          });
+          
+          content.animate({
+            opacity: [1, 0],
+            transform: ["translateY(0)", "translateY(-8px)"]
+          }, { duration: 200, easing: "ease" });
+
+          animation.onfinish = function() {
+            details.removeAttribute("open");
+            details.dataset.animating = "false";
+          };
+          animation.oncancel = function() {
+            details.dataset.animating = "false";
+          };
+        } else {
+          // Animar apertura
+          details.dataset.animating = "true";
+          const startHeight = details.offsetHeight + "px";
+          
+          // Medir altura abierta
+          details.setAttribute("open", "true");
+          const endHeight = details.offsetHeight + "px";
+          
+          const animation = details.animate({
+            height: [startHeight, endHeight]
+          }, {
+            duration: 300,
+            easing: "cubic-bezier(0.16, 1, 0.3, 1)"
+          });
+          
+          content.animate({
+            opacity: [0, 1],
+            transform: ["translateY(-8px)", "translateY(0)"]
+          }, { duration: 300, easing: "ease" });
+
+          animation.onfinish = function() {
+            details.dataset.animating = "false";
+          };
+          animation.oncancel = function() {
+            details.dataset.animating = "false";
+          };
+          
+          // Cerrar los demás
+          items.forEach(function(other) {
+             if (other !== details && other.open) {
+               other.querySelector("summary").click();
+             }
           });
         }
       });
@@ -311,6 +458,57 @@
   }
 
   /* ----------------------------------------------------------
+     SCROLL REVEAL ANIMATIONS
+     ---------------------------------------------------------- */
+  function initScrollReveal() {
+    // Autoinyectar animación a elementos clave para mayor movimiento general
+    const autoRevealSelectors = [
+      '.section-header .eyebrow',
+      '.section-header .h-section',
+      '.section-header .lede',
+      '.paquete-features li',
+      '.paquete-includes-label',
+      '.final-eyebrow',
+      '.final-headline',
+      '.final-lede',
+      '.hero-content h1',
+      '.hero-content p',
+      '.hero-actions'
+    ];
+    
+    autoRevealSelectors.forEach(function(selector) {
+      document.querySelectorAll(selector).forEach(function(el) {
+        el.classList.add('reveal-on-scroll');
+      });
+    });
+
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.querySelectorAll('.reveal-on-scroll').forEach(function(el) {
+        el.classList.add('is-revealed');
+      });
+      return;
+    }
+
+    const observer = new IntersectionObserver(function (entries, obs) {
+      const intersecting = entries.filter(function(e) { return e.isIntersecting; });
+      intersecting.forEach(function (entry, index) {
+        setTimeout(function() {
+          entry.target.classList.add('is-revealed');
+        }, index * 100); // Stagger leve
+        obs.unobserve(entry.target);
+      });
+    }, {
+      root: null,
+      rootMargin: "0px 0px -50px 0px",
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('.reveal-on-scroll').forEach(function(el) {
+      observer.observe(el);
+    });
+  }
+
+  /* ----------------------------------------------------------
      INIT
      ---------------------------------------------------------- */
   function init() {
@@ -320,7 +518,8 @@
     wireYear();
     wireFloatingCta();
     wireFaq();
-    wirePlanNotification();
+    wireNotifications();
+    initScrollReveal();
     track.pageView();
   }
 
