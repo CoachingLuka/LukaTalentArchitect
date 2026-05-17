@@ -19,7 +19,7 @@
     messages: {
       paqueteImpulso:
         "Hola, Luca. Quiero información del Plan Impulso Inicial para mejorar mi hoja de vida.",
-      paqueteElite:
+      paqueteÉlite:
         "Hola, Luca. Quiero información del Plan Élite Profesional para mejorar mi CV, LinkedIn y estrategia de búsqueda laboral.",
       paqueteArquitectura:
         "Hola, Luca. Quiero información sobre el Plan Arquitectura Total, que incluye el Plan Élite más la sesión 1 a 1 de coaching ontológico.",
@@ -61,15 +61,15 @@
     },
     clickWhatsApp: function (source) {
       if (source === 'paquetes_impulso') dispatch("ClickWhatsAppPlanImpulso");
-      else if (source === 'paquetes_elite') dispatch("ClickWhatsAppPlanElite");
+      else if (source === 'paquetes_élite') dispatch("ClickWhatsAppPlanÉlite");
       else if (source === 'paquetes_arquitectura') dispatch("ClickWhatsAppPlanArquitecturaTotal");
       else dispatch("ClickWhatsApp", { source: source });
     },
     selectPlanImpulso: function () {
       dispatch("SelectPlanImpulso");
     },
-    selectPlanElite: function () {
-      dispatch("SelectPlanElite");
+    selectPlanÉlite: function () {
+      dispatch("SelectPlanÉlite");
     },
     selectPlanArquitecturaTotal: function () {
       dispatch("SelectPlanArquitecturaTotal");
@@ -104,7 +104,7 @@
         track.clickWhatsApp(source);
 
         if (el.classList.contains("wa-paquete-impulso")) track.selectPlanImpulso();
-        if (el.classList.contains("wa-paquete-elite")) track.selectPlanElite();
+        if (el.classList.contains("wa-paquete-élite")) track.selectPlanÉlite();
         if (el.classList.contains("wa-paquete-arquitectura")) track.selectPlanArquitecturaTotal();
       });
     });

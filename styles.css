@@ -1008,7 +1008,7 @@ img.process-image {
 /* -- Paquete Impulso: neutral / white -- */
 /* Default styles = Impulso (neutral). No extra class needed. */
 
-/* -- Paquete Elite: aqua / blue -- */
+/* -- Paquete Élite: aqua / blue -- */
 .paquete-card--highlight {
   border: 2px solid var(--primary);
   background: linear-gradient(
@@ -1059,7 +1059,7 @@ img.process-image {
   box-shadow: var(--shadow-card);
 }
 
-/* Elite badge = aqua */
+/* Élite badge = aqua */
 .paquete-card--highlight .paquete-badge {
   background: var(--primary);
   color: var(--on-primary);
@@ -1112,7 +1112,7 @@ img.process-image {
   color: var(--text-strong);
 }
 
-/* Elite = aqua gradient */
+/* Élite = aqua gradient */
 .paquete-card--highlight h3 {
   background: linear-gradient(
     135deg,
@@ -1160,7 +1160,7 @@ img.process-image {
   color: var(--text-strong);
 }
 
-/* Elite price = aqua */
+/* Élite price = aqua */
 .paquete-card--highlight .paquete-amount {
   color: var(--primary-strong);
 }
