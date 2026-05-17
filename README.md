@@ -42,7 +42,7 @@ Pensado para estudiantes, perfiles junior, personas operativas o quienes necesit
 Incluye una base para organizar y comunicar mejor la experiencia profesional.
 
 **Valor:** $179.000 COP  
-**Entrega:** entre 48 y 72 horas para los entregables principales.
+**Entrega:** entre 48 y 72 horas para los herramientas principales.
 
 ---
 
@@ -53,7 +53,7 @@ Pensado para técnicos, tecnólogos y profesionales con experiencia que quieren 
 Incluye una optimización más completa del perfil profesional, con enfoque en hoja de vida, LinkedIn, ATS, entrevistas, logros y estrategia laboral.
 
 **Valor:** $279.000 COP  
-**Entrega:** entre 48 y 72 horas para los entregables principales.
+**Entrega:** entre 48 y 72 horas para los herramientas principales.
 
 ---
 
@@ -66,7 +66,7 @@ Incluye todo lo del Paquete Élite Profesional, más una sesión individual de c
 Está pensado para personas que no solo necesitan mejorar sus documentos, sino también ganar más claridad sobre cómo se están presentando, qué oportunidades quieren buscar y qué puede estar frenando su avance.
 
 **Valor:** definido en la página según la oferta vigente.  
-**Entrega:** materiales principales en 48–72 horas, más agendamiento de la sesión.
+**Entrega:** herramientas principales en 48–72 horas, más agendamiento de la sesión.
 
 ---
 
@@ -91,7 +91,7 @@ Envía comprobante
 ↓
 Comparte su información profesional
 ↓
-Recibe sus materiales
+Recibe sus herramientas
 ```
 
 WhatsApp es el canal principal para continuar la compra, recibir datos de pago y activar el proceso después del comprobante.
@@ -102,7 +102,7 @@ WhatsApp es el canal principal para continuar la compra, recibir datos de pago y
 
 La entrega depende del paquete elegido.
 
-Como base, la página comunica la entrega de materiales profesionales como:
+Como base, la página comunica la entrega de herramientas profesionales como:
 
 - Hoja de vida / CV optimizado.
 - Carta de presentación.
@@ -144,8 +144,8 @@ La página usa imágenes ilustrativas para reforzar la propuesta visual:
 - `process-visual.png`  
   Imagen del proceso de diagnóstico, optimización y entrega.
 
-- `entregables-bundle.png`  
-  Imagen del paquete de entregables profesionales.
+- `herramientas-bundle.png`  
+  Imagen del paquete de herramientas profesionales.
 
 Todas deben estar dentro de:
 
