@@ -156,7 +156,7 @@ assets/images/
 También existe un logo en:
 
 ```text
-assets/logo.png
+assets/logo.svg
 ```
 
 ---
