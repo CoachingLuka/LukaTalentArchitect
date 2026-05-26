@@ -18,11 +18,11 @@
     // Mensajes prellenados que se envían al hacer clic en cada CTA
     messages: {
       paqueteImpulso:
-        "Hola, Luca. Quiero información del Plan Impulso Inicial para mejorar mi hoja de vida.",
+        "Hola, Luka. Quiero información del Plan Impulso Inicial para mejorar mi hoja de vida.",
       paqueteÉlite:
-        "Hola, Luca. Quiero información del Plan Élite Profesional para mejorar mi CV, LinkedIn y estrategia de búsqueda laboral.",
+        "Hola, Luka. Quiero información del Plan Élite Profesional para mejorar mi CV, LinkedIn y estrategia de búsqueda laboral.",
       paqueteArquitectura:
-        "Hola, Luca. Quiero información sobre el Plan Arquitectura Total, que incluye el Plan Élite más la sesión 1 a 1 de coaching ontológico.",
+        "Hola, Luka. Quiero información sobre el Plan Arquitectura Total, que incluye el Plan Élite más la sesión 1 a 1 de coaching ontológico.",
     },
   };
 
